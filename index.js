@@ -6,38 +6,33 @@ function trataErro(erro) {
     throw new Error(chalk.red(erro.code, 'não há arquivo no diretório'));
 }
 
-//async/await
+function extraiLinks(texto) {
+    // Nova regex simplificada e mais eficiente para capturar os links
+    const regex = /\[([^\[\]]*?)\]\((https?:\/\/[^\s)]+)\)/gm;
+    const capturas = [...texto.matchAll(regex)];
+    const resultados = capturas.map(captura => ({ [captura[1]]: captura[2] }));
 
+    return resultados.length === 0 ? 'não há links no arquivo' : resultados;
+}
+
+// async/await
 async function pegaArquivo(caminhoDoArquivo) {
     try {
         const encoding = 'utf-8';
-        const texto = await fs.promises.readFile(caminhoDoArquivo, encoding)
-        console.log(chalk.red(texto));
+        const texto = await fs.promises.readFile(caminhoDoArquivo, encoding);
+        
+        // A MÁGICA ACONTECE AQUI:
+        // Passamos o texto do arquivo para a função que extrai os links
+        const linksExtraidos = extraiLinks(texto);
+        
+        // Exibimos o resultado bonitinho no console
+        console.log(chalk.cyan('Links encontrados no arquivo:'));
+        console.dir(linksExtraidos);
+
     } catch (erro) {
-        trataErro(erro)
+        trataErro(erro);
     }
 }
 
-// promises com then()
-
-//function pegaArquivo(caminhoDoArquivo) {
-//    const encoding = 'utf-8';
-//    fs.promises
-//      .readFile(caminhoDoArquivo, encoding)
-//      .then((texto) => console.log(chalk.green(texto)))
-//      .catch(trataErro)
-//}
-
-//function pegaArquivo(caminhoDoArquivo) {
-//    const encoding = 'utf-8';
-//    fs.readFile(caminhoDoArquivo, encoding, (erro, texto) => { 
-//        if (erro) {
-//            trataErro(erro);
-//        }
-//     console.log(chalk.green(texto));
-//    })
-//}
-
+// Executa a função passando o caminho do seu arquivo texto.md
 pegaArquivo('./arquivos/texto.md');
-
-//console.log(chalk.green('"Acredite em si mesmo e você será imparável." '));

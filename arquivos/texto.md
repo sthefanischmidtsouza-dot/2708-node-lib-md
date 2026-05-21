@@ -1,5 +1,9 @@
-A interface File provê informações sobre arquivos e permite ao JavaScript  a acessar seu conteúdo.
-console.log('São geralmente recuperados a partir de um objeto [FileList](https://developer.mozilla.org/pt-BR/docs/Web/API/FileList) que é retornado como resultado da seleção, pelo usuário, de arquivos através do elemento [<input>](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/Input), a partir do objeto [DataTransfer](https://developer.mozilla.org/pt-BR/docs/Web/API/DataTransfer) utilizado em operações de arrastar e soltar, ou a partir da API `mozGetAsFile()` em um [HTMLCanvasElement](https://developer.mozilla.org/pt-BR/docs/Web/API/HTMLCanvasElement). Em Gecko, códigos com privilégiios podem criar objetos File representando qualquer arquivo local sem a intereção do usuário (veja [Implementation notes](https://developer.mozilla.org/pt-BR/docs/Web/API/File#implementation_notes) para mais informações.).
-console.log('São geralmente recuperados a partir de um objeto [FileList](https://developer.mozilla.org/pt-BR/docs/Web/API/FileList) que é retornado como resultado da seleção, pelo usuário, de arquivos através do elemento [<input>](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/Input), a partir do objeto [DataTransfer](https://developer.mozilla.org/pt-BR/docs/Web/API/DataTransfer) utilizado em operações de arrastar e soltar, ou a partir da API `mozGetAsFile()` em um [HTMLCanvasElement](https://developer.mozilla.org/pt-BR/docs/Web/API/HTMLCanvasElement). Em Gecko, códigos com privilégiios podem criar objetos File representando qualquer arquivo local sem a intereção do usuário (veja [Implementation notes](https://developer.mozilla.org/pt-BR/docs/Web/API/File#implementation_notes) para mais informações.).')
-[Teste de retorno 400](https://httpstat.us/404).
-[gatinho salsicha](http://gatinhosalsicha.com.br/)
+# Meus Links de Teste
+
+Aqui estão os 5 links de páginas da internet para validar a atividade do Node.js:
+
+1. Acesse o buscador mais famoso do mundo no [Google](https://www.adorocinema.com/filmes/filme-257676/.)
+2. Para estudar programação e tecnologia, acesse a [Google](https://www.adorocinema.com/series/serie-37650/)
+3. Se quiser ver códigos e repositórios, visite o [Google](https://www.adorocinema.com/series/serie-32820/)
+4. Para consultar a documentação oficial do JavaScript, veja a [Google](https://www.adorocinema.com/filmes/filme-127189/)
+5. Acompanhe as novidades e downloads da plataforma no site oficial do [Google](https://www.adorocinema.com/filmes/filme-47422/)
